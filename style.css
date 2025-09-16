@@ -1,3 +1,32 @@
+/* Responsive tables and logos for mobile */
+@media (max-width: 700px) {
+  .card {
+    overflow-x: auto;
+  }
+  .edu-table,
+  .card table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    max-width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  .edu-table th, .edu-table td,
+  .card table th, .card table td {
+    white-space: nowrap;
+    padding: 0.5rem 0.5rem;
+  }
+  .edu-logos {
+    flex-wrap: wrap;
+    gap: 0.7rem;
+  }
+  .edu-logo, .workplace-logo {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 0.3rem;
+  }
+}
 /* Larger font for Research & Interest section */
 #research ul, #research ul li {
   font-size: 1.18rem;
@@ -192,8 +221,9 @@ a:hover, a:focus {
 }
 /* Navigation Bar */
 .navbar {
-  position: sticky;
-  top: 0;
+  /* Remove sticky nav for mobile, keep for desktop */
+  position: relative;
+  top: unset;
   width: 100%;
   background: var(--bg-card);
   z-index: 100;
@@ -473,43 +503,32 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .nav-container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     padding: 0.5rem 0.5rem;
   }
   .nav-links {
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     width: 100%;
     gap: 0.2rem;
-    display: none;
-    background: var(--bg-card);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    z-index: 999;
-  }
-  .nav-links.open {
     display: flex;
+    background: var(--bg-card);
+    position: static;
+    box-shadow: none;
+    margin-top: 0.5rem;
+    justify-content: flex-start;
+  }
+  .nav-links li {
+    flex: 1 1 40%;
+    min-width: 120px;
+    margin-bottom: 0.2rem;
+    margin-right: 0.2rem;
   }
   .nav-logo {
     margin-bottom: 0.5rem;
-  }
-  .navbar {
-    position: relative;
-  }
-  .nav-toggle {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: var(--accent-orange);
-    cursor: pointer;
-    margin-left: auto;
-    margin-right: 0.5rem;
-    z-index: 1001;
   }
   .avatar {
     width: 90px;
@@ -525,5 +544,11 @@ body {
   }
   .hero h1 {
     font-size: 1.3rem;
+  }
+}
+@media (min-width: 701px) {
+  .navbar {
+    position: sticky;
+    top: 0;
   }
 }
