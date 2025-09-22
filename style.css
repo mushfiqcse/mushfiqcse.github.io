@@ -364,8 +364,8 @@ body {
 }
 
 .avatar {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 3px solid var(--accent-orange);
   margin-bottom: 1rem;
