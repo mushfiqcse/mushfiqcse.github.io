@@ -81,6 +81,7 @@ if (scrollBtn) {
 	scrollBtn.style.display = window.scrollY > 200 ? 'flex' : 'none';
 }
 
+
 // Smooth scroll for navigation menu with transition effect
 document.querySelectorAll('.nav-links a').forEach(link => {
 	link.addEventListener('click', function(e) {
@@ -98,6 +99,29 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 		}
 	});
 });
+
+// Date and Time in Footer
+function getOrdinal(n) {
+  const s = ["th", "st", "nd", "rd"], v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
+}
+function updateFooterDateTime() {
+  const now = new Date();
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const hh = String(now.getHours()).padStart(2, '0');
+  const mm = String(now.getMinutes()).padStart(2, '0');
+  const ss = String(now.getSeconds()).padStart(2, '0');
+  const dayName = days[now.getDay()];
+  const dayNum = getOrdinal(now.getDate());
+  const month = months[now.getMonth()];
+  const year = now.getFullYear();
+  const formatted = `${hh}:${mm}:${ss} || ${dayName}, ${dayNum} ${month}, ${year}`;
+  const el = document.getElementById('datetime-footer');
+  if (el) el.textContent = formatted;
+}
+setInterval(updateFooterDateTime, 1000);
+window.addEventListener('DOMContentLoaded', updateFooterDateTime);
 
 // Animate skill bars on scroll into view
 function animateSkillBars() {
