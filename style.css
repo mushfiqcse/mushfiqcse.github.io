@@ -1,3 +1,40 @@
+/* Research & Interest Table */
+.research-table-wrap {
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.research-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0.7rem 0.5rem;
+}
+.research-table td {
+  background: #181818;
+  border-radius: 10px;
+  padding: 1rem 0.7rem;
+  text-align: center;
+  font-size: 1.08rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0,172,237,0.08);
+  transition: background 0.2s;
+}
+.research-table td a {
+  color: inherit;
+  text-decoration: none;
+}
+.research-table td:hover {
+  background: #232323;
+}
+@media (max-width: 900px) {
+  .research-table,
+  .research-table tr,
+  .research-table td {
+    display: table;
+    width: auto;
+    margin-bottom: 0;
+    box-sizing: border-box;
+  }
+}
 .skills-bars-table {
   margin-top: 0.5rem;
 }
@@ -364,8 +401,8 @@ body {
 }
 
 .avatar {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   border: 3px solid var(--accent-orange);
   margin-bottom: 1rem;
@@ -577,7 +614,7 @@ body {
 
 @media (max-width: 100%) {
   .nav-container {
-    flex-direction: row;
+    flex-direction: column;
     align-items: stretch;
     padding: 0.5rem 0.5rem;
   }
