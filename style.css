@@ -486,6 +486,53 @@ body {
   color: #888;
 }
 
+/* Skills Bars Section */
+.skills-bars {
+  margin-top: 1.5rem;
+}
+.skill-bar {
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  flex-wrap: wrap;
+}
+.skill-bar span {
+  min-width: 160px;
+  font-weight: 500;
+  color: var(--accent-blue);
+}
+.bar-bg {
+  flex: 1 1 200px;
+  background: #232323;
+  border-radius: 20px;
+  height: 18px;
+  overflow: hidden;
+  margin-right: 0.7rem;
+  box-shadow: 0 2px 8px rgba(0,172,237,0.10);
+}
+.bar-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 20px;
+  transition: width 1.5s cubic-bezier(0.4,0,0.2,1);
+}
+.bar-fill.blue {
+  background: linear-gradient(90deg, #00aced 60%, #007aff 100%);
+}
+.bar-fill.orange {
+  background: linear-gradient(90deg, #ff9800 60%, #ffb347 100%);
+}
+.bar-fill.green {
+  background: linear-gradient(90deg, #51c777 60%, #1f7239 100%);
+}
+.percent-label {
+  min-width: 40px;
+  font-weight: 600;
+  color: var(--accent-orange);
+  text-align: right;
+}
+
 /* Responsive Styles */
 @media (max-width: 800px) {
   .container {

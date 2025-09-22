@@ -98,3 +98,16 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 		}
 	});
 });
+
+// Animate skill bars on scroll into view
+function animateSkillBars() {
+  const bars = document.querySelectorAll('.bar-fill');
+  bars.forEach(bar => {
+	const percent = bar.getAttribute('data-percent');
+	if (bar.getBoundingClientRect().top < window.innerHeight - 40) {
+	  bar.style.width = percent + '%';
+	}
+  });
+}
+window.addEventListener('scroll', animateSkillBars);
+window.addEventListener('DOMContentLoaded', animateSkillBars);
