@@ -554,31 +554,9 @@ body {
 }
 .percent-label {
   min-width: 40px;
-  font-weight: 700;
-  color: #fff;
+  font-weight: 600;
+  color: var(--accent-orange);
   text-align: right;
-  display: inline-block;
-  padding: 0.18em 0.7em;
-  border-radius: 7px;
-  margin-left: 0.3em;
-  font-size: 1em;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-  background: #444;
-  border: 2px solid transparent;
-  letter-spacing: 1px;
-  transition: background 0.3s, border 0.3s;
-}
-.percent-label.blue {
-  background: linear-gradient(90deg, #00aced 60%, #007aff 100%);
-  border-color: #007aff;
-}
-.percent-label.orange {
-  background: linear-gradient(90deg, #ff9800 60%, #ffb347 100%);
-  border-color: #ff9800;
-}
-.percent-label.green {
-  background: linear-gradient(90deg, #51c777 60%, #1f7239 100%);
-  border-color: #51c777;
 }
 
 /* Responsive Styles */
