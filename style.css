@@ -12,16 +12,14 @@
   border: none;
 }
 @media (max-width: 900px) {
+  /* Remove block display for skills-table on mobile to keep 4x2 layout */
+  .skills-table,
+  .skills-table tr,
   .skills-table td {
-    display: block;
-    width: 100%;
+    display: table;
+    width: auto;
+    margin-bottom: 0;
     box-sizing: border-box;
-    margin-bottom: 0.7rem;
-  }
-  .skills-table tr {
-    display: block;
-    width: 100%;
-    margin-bottom: 0.7rem;
   }
 }
 /* Responsive tables and logos for mobile */
