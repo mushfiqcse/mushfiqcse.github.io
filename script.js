@@ -4,7 +4,7 @@ function toggleNav() {
 	navLinks.classList.toggle('open');
 }
 // Highlight nav link based on scroll position
-const sectionIds = ["about", "workplace", "education", "training", "membership","research", "gallery", "contact"];
+const sectionIds = ["skills", "workplace", "education", "training", "membership","research", "gallery", "contact"];
 const navLinks = Array.from(document.querySelectorAll('.nav-links a'));
 
 function onScrollHighlightNav() {
