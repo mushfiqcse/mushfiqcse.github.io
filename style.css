@@ -488,13 +488,13 @@ body {
 
 /* Skills Bars Section */
 .skills-bars {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
 }
 .skill-bar {
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
-  gap: 1.1rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
 }
 .skill-bar span {
