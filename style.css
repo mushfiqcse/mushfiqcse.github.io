@@ -34,12 +34,12 @@
     overflow-x: auto;
     max-width: 100%;
     border-collapse: collapse;
-    font-size: 0.95rem;
+    font-size: 0.82rem;
   }
   .edu-table th, .edu-table td,
   .card table th, .card table td {
     white-space: nowrap;
-    padding: 0.5rem 0.5rem;
+    padding: 0.22rem 0.28rem;
   }
   .edu-logos {
     flex-wrap: wrap;
@@ -575,7 +575,7 @@ body {
   }
 }
 
-@media (max-width: 100%) {
+@media (max-width: 800px) {
   .nav-container {
     flex-direction: column;
     align-items: stretch;
