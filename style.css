@@ -1,5 +1,5 @@
 .skills-bars-table {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
 }
 .skills-table {
   width: 100%;
@@ -11,7 +11,7 @@
   padding: 0.2rem 0.5rem;
   border: none;
 }
-@media (max-width: 900px) {
+@media (max-width: 90%) {
   /* Remove block display for skills-table on mobile to keep 4x2 layout */
   .skills-table,
   .skills-table tr,
@@ -51,10 +51,7 @@
     margin-bottom: 0.3rem;
   }
 }
-/* Larger font for Research & Interest section */
-#research ul, #research ul li {
-  /*font-size: 1.18rem;*/
-}
+
 /* Justify About section text */
 #about p {
   text-align: justify;
